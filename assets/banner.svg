@@ -1,0 +1,93 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DocTail — revisor, simplificador e auditor de documentação. Um produto da Agência Vibe Code.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="0.55" stop-color="#111a2e"/>
+      <stop offset="1" stop-color="#0d1526"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="0.5" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- fundo -->
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="6" fill="url(#accent)"/>
+
+  <!-- pontos decorativos -->
+  <g opacity="0.10" fill="#93c5fd">
+    <circle cx="1150" cy="60" r="3"/>
+    <circle cx="1190" cy="110" r="2"/>
+    <circle cx="1120" cy="150" r="2"/>
+    <circle cx="1210" cy="60" r="2"/>
+  </g>
+
+  <!-- ícone: documento sendo "enxugado" -->
+  <g transform="translate(96,86)" filter="url(#soft)">
+    <!-- documento de trás (versão longa) -->
+    <rect x="26" y="8" width="128" height="172" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <!-- documento da frente (versão enxuta) -->
+    <rect x="0" y="0" width="128" height="172" rx="12" fill="url(#paper)"/>
+    <!-- dobra -->
+    <path d="M104 0 L128 24 L104 24 Z" fill="#cbd5e1"/>
+    <!-- linhas: cheias (mantidas) -->
+    <rect x="20" y="34" width="72" height="9" rx="4.5" fill="#2563eb"/>
+    <rect x="20" y="56" width="88" height="7" rx="3.5" fill="#94a3b8"/>
+    <rect x="20" y="72" width="80" height="7" rx="3.5" fill="#94a3b8"/>
+    <!-- linhas cortadas (excesso removido) -->
+    <g opacity="0.5">
+      <rect x="20" y="94" width="70" height="7" rx="3.5" fill="#cbd5e1"/>
+      <line x1="16" y1="97.5" x2="98" y2="97.5" stroke="#ef4444" stroke-width="2.5"/>
+    </g>
+    <!-- checklist gerado -->
+    <g transform="translate(20,118)">
+      <rect x="0" y="0" width="14" height="14" rx="4" fill="#16a34a"/>
+      <path d="M3.5 7 L6 9.5 L10.5 4.5" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="24" y="3" width="64" height="8" rx="4" fill="#334155"/>
+    </g>
+    <g transform="translate(20,140)">
+      <rect x="0" y="0" width="14" height="14" rx="4" fill="#16a34a"/>
+      <path d="M3.5 7 L6 9.5 L10.5 4.5" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="24" y="3" width="52" height="8" rx="4" fill="#334155"/>
+    </g>
+  </g>
+
+  <!-- texto -->
+  <g transform="translate(300,0)">
+    <text x="0" y="150" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="92" font-weight="800" fill="#ffffff" letter-spacing="-1">DocTail</text>
+    <rect x="4" y="172" width="118" height="6" rx="3" fill="url(#accent)"/>
+    <text x="0" y="212" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="600" fill="#cbd5e1">Revisor, simplificador e auditor de documentação</text>
+    <text x="0" y="250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="400" fill="#94a3b8">Corta o excesso. Preserva o crítico. Deixa a documentação executável.</text>
+
+    <!-- chips -->
+    <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600">
+      <g transform="translate(0,286)">
+        <rect width="118" height="34" rx="17" fill="#1e293b" stroke="#334155"/>
+        <text x="59" y="22" text-anchor="middle" fill="#93c5fd">Claude Code</text>
+      </g>
+      <g transform="translate(130,286)">
+        <rect width="132" height="34" rx="17" fill="#1e293b" stroke="#334155"/>
+        <text x="66" y="22" text-anchor="middle" fill="#c4b5fd">5 skills · 2 agents</text>
+      </g>
+      <g transform="translate(274,286)">
+        <rect width="96" height="34" rx="17" fill="#1e293b" stroke="#334155"/>
+        <text x="48" y="22" text-anchor="middle" fill="#fcd34d">hooks + CLI</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- assinatura Vibe Code -->
+  <g transform="translate(1184,300)" text-anchor="end" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#e2e8f0">Agência Vibe Code</text>
+    <text x="0" y="22" font-size="13" font-weight="400" fill="#64748b">agenciavibecode.com</text>
+  </g>
+</svg>

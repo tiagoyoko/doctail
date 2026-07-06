@@ -1,6 +1,8 @@
 <div align="center">
 
-# 📄 DocTail
+<img src="assets/banner.svg" alt="DocTail — revisor, simplificador e auditor de documentação. Um produto da Agência Vibe Code." width="100%">
+
+<br><br>
 
 **Revisor, simplificador e auditor de documentação** para Claude Code.
 
