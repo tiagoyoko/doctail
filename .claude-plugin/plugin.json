@@ -1,0 +1,26 @@
+{
+  "name": "doctail",
+  "displayName": "DocTail",
+  "version": "0.1.0",
+  "description": "Revisor, simplificador e auditor de documentação técnica, operacional, comercial, CRM, automações, processos, playbooks e bases de conhecimento.",
+  "author": {
+    "name": "Agencia Vibe Code"
+  },
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "docs",
+    "review",
+    "simplification",
+    "knowledge-base",
+    "crm",
+    "automation",
+    "processes",
+    "playbooks"
+  ],
+  "skills": "./skills/",
+  "agents": [
+    "./agents/doc-auditor.md",
+    "./agents/doc-refactorer.md"
+  ]
+}

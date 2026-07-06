@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "doctail",
+  "description": "DocTail — revisor, simplificador e auditor de documentação técnica, operacional, comercial, CRM, automações, processos, playbooks e bases de conhecimento.",
+  "owner": {
+    "name": "Agência Vibe Code",
+    "email": "tiago@agenciavibecode.com"
+  },
+  "plugins": [
+    {
+      "name": "doctail",
+      "source": "./",
+      "description": "Revisor operacional anti-burocracia: skills /doctail:review, simplify, audit, diff, style; subagents doc-auditor e doc-refactorer; hooks de guarda e alerta pós-edição.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Agência Vibe Code",
+        "email": "tiago@agenciavibecode.com"
+      },
+      "license": "MIT",
+      "category": "workflow",
+      "keywords": ["documentation", "docs", "review", "simplification", "knowledge-base", "crm", "automation", "processes", "playbooks"]
+    }
+  ]
+}

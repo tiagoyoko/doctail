@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+"""doctail — wrapper de linha de comando do plugin DocTail.
+
+Roteia subcomandos para os scripts em ../scripts/. Funciona a partir de
+qualquer diretório, resolvendo a raiz do plugin pela própria localização.
+
+Comandos:
+    doctail find-docs [path] [--json]
+    doctail metrics   [path] [--json]
+    doctail dedupe    [path] [--json] [--threshold 0.86]
+    doctail validate
+    doctail help
+"""
+import os
+import runpy
+import sys
+
+BIN_DIR = os.path.dirname(os.path.abspath(__file__))
+PLUGIN_ROOT = os.path.dirname(BIN_DIR)
+SCRIPTS_DIR = os.path.join(PLUGIN_ROOT, "scripts")
+
+COMMANDS = {
+    "find-docs": "doctail_find_docs.py",
+    "metrics": "doctail_metrics.py",
+    "dedupe": "doctail_dedupe.py",
+    "validate": "doctail_validate.py",
+}
+
+HELP = """DocTail — revisor, simplificador e auditor de documentação.
+
+Uso:
+    doctail <comando> [argumentos]
+
+Comandos:
+    find-docs [path] [--json]                 Lista arquivos de documentação.
+    metrics   [path] [--json]                 Métricas de clareza/excesso/estrutura.
+    dedupe    [path] [--json] [--threshold N] Detecta duplicidade (padrão 0.86).
+    validate                                   Valida a estrutura do plugin.
+    help                                       Mostra esta ajuda.
+
+Exemplos:
+    doctail find-docs ./docs
+    doctail metrics ./docs/onboarding.md --json
+    doctail dedupe ./docs --threshold 0.9
+    doctail validate
+"""
+
+
+def run_script(script_name, args):
+    """Executa um script de scripts/ como __main__, repassando argumentos."""
+    path = os.path.join(SCRIPTS_DIR, script_name)
+    if not os.path.isfile(path):
+        sys.stderr.write("Script não encontrado: %s\n" % path)
+        return 1
+    sys.argv = [path] + args
+    try:
+        runpy.run_path(path, run_name="__main__")
+        return 0
+    except SystemExit as exc:
+        code = exc.code
+        if code is None:
+            return 0
+        if isinstance(code, int):
+            return code
+        sys.stderr.write("%s\n" % code)
+        return 1
+
+
+def main(argv):
+    if not argv or argv[0] in ("help", "-h", "--help"):
+        sys.stdout.write(HELP)
+        return 0
+
+    command = argv[0]
+    rest = argv[1:]
+
+    if command not in COMMANDS:
+        sys.stderr.write("Comando desconhecido: %s\n\n" % command)
+        sys.stdout.write(HELP)
+        return 1
+
+    return run_script(COMMANDS[command], rest)
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))
