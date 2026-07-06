@@ -1,6 +1,21 @@
-# DocTail
+<div align="center">
 
-**Revisor, simplificador e auditor de documentação** para Claude Code. Empacotado como plugin autocontido, versionável e testável localmente.
+# 📄 DocTail
+
+**Revisor, simplificador e auditor de documentação** para Claude Code.
+
+Um produto da **[Agência Vibe Code](https://agenciavibecode.com)**.
+
+[![Versão](https://img.shields.io/badge/vers%C3%A3o-0.1.0-2563eb)](CHANGELOG.md)
+[![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-16a34a)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-7c3aed)](https://claude.com/claude-code)
+[![Idioma](https://img.shields.io/badge/idioma-pt--BR-f59e0b)](#)
+
+</div>
+
+---
+
+Plugin autocontido, versionável e testável localmente.
 
 DocTail não é um resumidor genérico. É um **revisor operacional anti-burocracia**, guiado por um único princípio:
 
@@ -132,3 +147,17 @@ doctail/bin/doctail metrics ./doctail/examples
 - **Não simplifica documentação legal/compliance de forma agressiva** — nesses casos opera em modo conservador, mesmo sob pedido de agressividade, salvo instrução explícita.
 - **Os hooks não alteram arquivos automaticamente.** O guard bloqueia; o pós-edição só alerta.
 - A detecção de duplicidade (`dedupe`) compara pares de parágrafos e é `O(n²)` no número de parágrafos — em bases muito grandes, rode por subpasta.
+
+## Licença
+
+Distribuído sob a licença [MIT](LICENSE). © 2026 Agência Vibe Code.
+
+---
+
+<div align="center">
+
+Feito com foco em documentação executável pela **[Agência Vibe Code](https://agenciavibecode.com)**.
+
+Dúvidas, sugestões ou uso corporativo: [tiago@agenciavibecode.com](mailto:tiago@agenciavibecode.com)
+
+</div>
